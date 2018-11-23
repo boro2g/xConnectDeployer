@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sitecore.XConnect">
-      <HintPath>..\ejrfidemo\Bin\Sitecore.XConnect.dll</HintPath>
+      <HintPath>..\demo\Bin\Sitecore.XConnect.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -142,17 +142,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ejrfidemo.AutomationEngine\ejrfidemo.AutomationEngine.csproj">
+    <ProjectReference Include="..\demo.AutomationEngine\demo.AutomationEngine.csproj">
       <Project>{a8e4faa4-7502-4fbd-9bd8-362ede31627a}</Project>
-      <Name>ejrfidemo.AutomationEngine</Name>
+      <Name>demo.AutomationEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ejrfidemo.CustomerInformation\ejrfidemo.CustomerInformation.csproj">
+    <ProjectReference Include="..\demo.CustomerInformation\demo.CustomerInformation.csproj">
       <Project>{8F815A14-156B-4459-B9FF-D4EAD87648BF}</Project>
-      <Name>ejrfidemo.CustomerInformation</Name>
+      <Name>demo.CustomerInformation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ejrfidemo.Rules\ejrfidemo.Rules.csproj">
+    <ProjectReference Include="..\demo.Rules\demo.Rules.csproj">
       <Project>{e63350e7-65c7-4041-bd49-d7617f6a9b03}</Project>
-      <Name>ejrfidemo.Rules</Name>
+      <Name>demo.Rules</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
