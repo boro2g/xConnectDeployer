@@ -1,0 +1,90 @@
+﻿<Settings>
+	<Sitecore>
+		<XConnect>
+			<Services>
+				<DescriptorLocator>
+					<Options>
+						<PredicateDescriptors>
+							<UserHasPurchasedBasket>
+								<id>{ACB36775-7F5F-4DA4-B0F6-1EB706A3E775}</id>
+								<type>demo.Rules.Basket.UserHasPurchasedBasket, demo.Rules</type>
+							</UserHasPurchasedBasket>
+						</PredicateDescriptors>
+					</Options>
+				</DescriptorLocator>
+				<XConnect.Client.Configuration>
+					<Options>
+						<Models>
+							<CustomModel>
+								<TypeName>demo.CustomerInformation.LatestFlight.LatestFlightModel, demo.CustomerInformation</TypeName>
+							</CustomModel>
+						</Models>
+					</Options>
+				</XConnect.Client.Configuration>
+				<MarketingAutomation.Activity.TextMessageActivity>
+					<Type>Sitecore.Xdb.MarketingAutomation.Locator.ActivityTypeRegistration, Sitecore.Xdb.MarketingAutomation</Type>
+					<LifeTime>Singleton</LifeTime>
+					<Options>
+						<Id>b896361e-4cfe-4dd6-80c3-f8b81046aebb</Id>
+						<ImplementationType>demo.AutomationEngine.TextMessageActivity,demo.AutomationEngine</ImplementationType>
+					</Options>
+				</MarketingAutomation.Activity.TextMessageActivity>
+				<MarketingAutomation.Activity.EmailActivity>
+					<Type>Sitecore.Xdb.MarketingAutomation.Locator.ActivityTypeRegistration, Sitecore.Xdb.MarketingAutomation</Type>
+					<LifeTime>Singleton</LifeTime>
+					<Options>
+						<Id>{2C97D0C6-2F34-4D16-9DA9-BA0853EC2076}</Id>
+						<ImplementationType>demo.AutomationEngine.EmailActivity,demo.AutomationEngine</ImplementationType>
+					</Options>
+				</MarketingAutomation.Activity.EmailActivity>
+				<MarketingAutomation.Activity.DebugActivity>
+					<Type>Sitecore.Xdb.MarketingAutomation.Locator.ActivityTypeRegistration, Sitecore.Xdb.MarketingAutomation</Type>
+					<LifeTime>Singleton</LifeTime>
+					<Options>
+						<Id>{54AA7099-E4E3-41E4-B1F7-F1988866358B}</Id>
+						<ImplementationType>demo.AutomationEngine.DebugActivity,demo.AutomationEngine</ImplementationType>
+					</Options>
+				</MarketingAutomation.Activity.DebugActivity>
+			</Services>
+			<MarketingAutomation>
+				<Engine>
+					<Services>
+						<SmsSender.Service>
+							<Type>demo.Sms.SmsSender, demo.Sms</Type>
+							<As>demo.Sms.ISmsSender, demo.Sms</As>
+							<LifeTime>Singleton</LifeTime>
+						</SmsSender.Service>
+						<EmailSender.Service>
+							<Type>demo.Email.EmailSender, demo.Email</Type>
+							<As>demo.Email.IEmailSender, demo.Email</As>
+							<LifeTime>Singleton</LifeTime>
+						</EmailSender.Service>
+						<ContentApi.Service>
+							<Type>demo.Content.ContentLoader, demo.Content</Type>
+							<As>demo.Content.IContentLoader, demo.Content</As>
+							<LifeTime>Singleton</LifeTime>
+						</ContentApi.Service>
+						<ContentLoaderConfiguration>
+							<Type>demo.Content.ContentLoaderConfiguration, demo.Content</Type>
+							<LifeTime>Singleton</LifeTime>
+						</ContentLoaderConfiguration>
+						<MarketingAutomation.Loading.ContactFacetsConfigurator>
+							<Type>Sitecore.Xdb.MarketingAutomation.Loading.ContactFacetsConfigurator, Sitecore.Xdb.MarketingAutomation</Type>
+							<As>Sitecore.Xdb.MarketingAutomation.Core.Loading.IContactExpandOptionsConfigurator, Sitecore.Xdb.MarketingAutomation.Core</As>
+							<LifeTime>Singleton</LifeTime>
+							<Options>
+								<IncludeFacetNames>
+									<Facet1>Personal</Facet1>
+									<Facet2>PhoneNumbers</Facet2>
+									<Facet3>Emails</Facet3>
+									<Facet4>LatestFlight</Facet4>
+								</IncludeFacetNames>
+								<ExcludeFacetNames />
+							</Options>
+						</MarketingAutomation.Loading.ContactFacetsConfigurator>
+					</Services>
+				</Engine>
+			</MarketingAutomation>
+		</XConnect>
+	</Sitecore>
+</Settings>
